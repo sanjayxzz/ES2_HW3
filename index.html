@@ -1,0 +1,52 @@
+//1//
+
+const { Agent } = require("http")
+
+const personName = (firstName,lastName) => ({ firstName: firstName , lastName : lastName})
+
+console.log(personName("sanjay","kumar"))
+
+//2//
+
+const stringObj = (str) => ({text: str.toUpperCase()})
+console.log(stringObj("sanjay"))
+
+//3//
+
+const personDetail = (firstName, lastName,age,phoneNumber) => ({
+  firstName:firstName,lastName:lastName,age:age, phoneNumber:phoneNumber
+})
+console.log(personDetail("sanjay", "kumar",23,8576758946))
+
+//4//
+
+const twoWords = (word1,word2) => ({ word1: word1, word2:word2 })
+console.log(twoWords("sanjay","kumar"))
+
+//5//
+
+const calculateCircleProperties = (radius) => ({circumference: 2 * Math.PI * radius, area:Math.PI * Math.pow(radius,2)})
+console.log(calculateCircleProperties(5))
+
+//6//
+
+const analyzeSentence = (sentence) => ({worCount: sentence.split(" ").length})
+console.log(analyzeSentence("java script is fun"))
+
+
+//7//
+
+const calculateDifferenceAndQuotient = (num1,num2) =>({ difference: num1 - num2, quotient: num1 / num2})
+console.log(calculateDifferenceAndQuotient(10,5))
+
+//8//
+
+const calculateSquareAndCube = (num) => ({square: Math.pow( num,2),
+                                     cube:Math.pow(num,3)})
+console.log(calculateSquareAndCube(4))
+
+//9//
+
+const checkNumber = (num) => ({isPositive : num>0 ,isNegetive : num<0 })
+console.log(checkNumber(5))
+console.log(checkNumber(-5))
